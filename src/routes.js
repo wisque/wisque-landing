@@ -5,6 +5,9 @@ import stream from 'koa-stream';
 const indexRouter = new Router();
 
 indexRouter
+    .get('/styles', function*() {
+        yield this.render('elements');
+    })
     .get('/', function *() {
         yield this.render('index');
     })

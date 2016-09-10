@@ -11,6 +11,14 @@ const app = new Koa();
 registerMiddlewares(app);
 registerRoutes(app);
 
-app.listen(4000);
+app.listen(4000, () => {
+    console.log(`
+    ==============================
+    WISQUE APP LANDING   *********
+    NOW RUNNING ON PORT 4000 *****
+    ENVIRONMENT IS DEVELOPMENT ***
+    ==============================
+    `);
+});
 
 export default app;

@@ -10,7 +10,6 @@ export default function(app) {
         extension: 'html',
         cache: app.env !== 'development',
         layoutsDir: 'views',
-        defaultLayout: "index.html"
     }));
     app.use(morgan('dev'));
     app.use(body({ multipart: true }));
