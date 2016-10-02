@@ -21,4 +21,13 @@ app.listen(4000, () => {
     `);
 });
 
+/** Handle all unhandled promise rejections and exceptions **/
+process.on('uncaughtException', error => {
+    console.error(`Uncaught exception: "${error}". ${error.stack || 'No stack trace'}`);
+});
+
+process.on('unhandledRejection', error => {
+    console.error(`Unhandled promise rejection: "${error}". ${error.stack || 'No stack trace'}`);
+});
+
 export default app;
